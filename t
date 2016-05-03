@@ -79,7 +79,7 @@ __t_extract_project() {
 }
 
 action=$1; shift
-[ "$TIMELOG" ] && timelog="$TIMELOG" || timelog="${HOME}/.timelog.ldg"
+timelog=${TIMELOG:-~/.timelog.ldg}
 
 case "${action}" in
   in)   _t_in "$@";;
